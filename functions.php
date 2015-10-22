@@ -9,3 +9,6 @@ register_sidebar(
 
 // RSS フィード
 add_theme_support('automatic-feed-links');
+
+// カスタムメニュー
+register_nav_menu('navigation', 'ナビゲーション');
