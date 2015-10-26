@@ -6,6 +6,7 @@
 	<?php bloginfo('name'); ?>
 	<?php wp_title(); ?>
 	</title>
+	<meta  name="viewport" content="width=device-width">
 	<link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">

@@ -2,21 +2,22 @@
 	
 <div class="container">
 
+<div class="contents">
 	<?php if(is_category()): ?>
 	<h1 class="archive-title">
 	<i class="fa fa-folder-open"></i>
 	「<?php single_cat_title(); ?>」に関する記事
 	</h1>
 	<?php endif; ?>
-
+	
 	<?php if(is_month()): ?>
 	<h1 class="archive-title">
 	<i class="fa fa-clock-o"></i>
 	<?php echo get_the_date('Y年n月'); ?>に投稿した記事
 	</h1>
 	<?php endif; ?>
-
-
+	
+	
 	<?php if(have_posts()): while(have_posts()): the_post(); ?>
 	
 	<article <?php post_class(); ?>>
@@ -30,7 +31,7 @@
 	<?php endif; ?>
 	
 	<div class="postinfo">
-
+	
 		<time datetime="<?php echo get_the_date('Y-m-d'); ?>">
 			<i class="fa fa-clock-o"></i>
 			<?php echo get_the_date(); ?>
@@ -40,7 +41,7 @@
 			<i class="fa fa-folder-open"></i>
 			<?php the_category(', '); ?>
 		</span>
-
+	
 		<span class="postcom">
 		<i class="fa fa-comment"></i>
 		<a href="<?php comments_link(); ?>">
@@ -50,7 +51,7 @@
 								'コメント (%件)'); ?>
 		</a>
 		</span>
-
+	
 	</div>
 	
 	<?php the_content(); ?>
@@ -89,20 +90,21 @@
 			</span>
 		</div>
 	<?php endif; ?>
+</div><!-- contents -->
 
 <div class="blogmenu">
-<ul>
-<?php dynamic_sidebar(); ?>
-
-<li class="widget">
 	<ul>
-	<li><a href="<?php bloginfo('rss2_url'); ?>">
-	<i class="fa fa-rss-square"></i> RSS
-	</a></li>
-	</ul>
-</li>
+	<?php dynamic_sidebar(); ?>
 
-</ul>
+	<li class="widget">
+		<ul>
+		<li><a href="<?php bloginfo('rss2_url'); ?>">
+		<i class="fa fa-rss-square"></i> RSS
+		</a></li>
+		</ul>
+	</li>
+
+	</ul>
 </div>
 
 </div><!-- container -->
